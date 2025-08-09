@@ -31,7 +31,7 @@ int main(void)
     if (glewInit() != GLEW_OK)
         std::cout << "error" << std::endl;
 
-    //Shader shader("res/shaders/Basic.shader");
+    Shader shader("res/shaders/Basic.shader");
     Shader shader2("res/shaders/Basic2.shader");
 
     float vertices[] = {
@@ -84,13 +84,13 @@ int main(void)
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        shader2.Bind();
+        shader.Bind();
 		glBindVertexArray(VAO[0]);
         //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 		//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		//shader.Unbind();
-        //shader2.Bind();
+        shader2.Bind();
         //glBindVertexArray(0);
         glBindVertexArray(VAO[1]);
 		glDrawArrays(GL_TRIANGLES, 3, 3);
