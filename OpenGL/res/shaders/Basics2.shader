@@ -61,7 +61,7 @@ void main()
 //     vec4 c3 = vec4(d,d,d, 1.0);
 //     color = vec4(cl,1.0,1.0);
        // color =vColor;
-       color = vec4(1.0f,0.5,0.0,1.0);
+       color = vec4(1.0f,1.0f,0.0f,1.0f);
 //     color = vec4(texColor);
 }
 
